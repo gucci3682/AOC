@@ -1,0 +1,22 @@
+{
+  "name": "aoc",
+  "version": "1.0.0",
+  "description": "clearing AOC to improve my algos",
+  "main": "AOC_1.js",
+  "scripts": {
+    "test": "npx tsnode"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-turbo": "^0.0.7",
+    "postcss": "^8.4.22",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.2.7",
+    "tailwindcss": "^3.3.1",
+    "typescript": "^5.0.2"
+  }
+}
