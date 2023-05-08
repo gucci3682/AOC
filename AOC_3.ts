@@ -3,7 +3,7 @@ import * as rd from 'readline';
 
 const aoc_3a = (filename: string): void => {
 const reader = rd.createInterface(fs.createReadStream(filename));
-let priorities = {
+const priorities = {
 	"a": 1,
 	"b": 2,
 	"c": 3,
@@ -61,9 +61,9 @@ let priorities = {
 let total = 0;
 
 reader.on("line", (line: string) => {
-	let first = line.slice(0, line.length/2);
-	let second = line.slice(-line.length/2);
-	for (let i of first.split("")) {
+	const first = line.slice(0, line.length/2);
+	const second = line.slice(-line.length/2);
+	for (const i of first.split("")) {
 		if (second.includes(i)) {
 			total += priorities[i];
 			break;
@@ -80,7 +80,7 @@ aoc_3a("input_3.txt");
 
 const aoc_3b = (filename: string): void => {
 	const reader = rd.createInterface(fs.createReadStream(filename));
-	let priorities = {
+	const priorities = {
 		"a": 1,
 		"b": 2,
 		"c": 3,
@@ -141,9 +141,9 @@ const aoc_3b = (filename: string): void => {
 	
 	reader.on("line", (line: string) => {
 		lineNum++;
-		let strArr = line.split("");
+		const strArr = line.split("");
 		if (lineNum % 3 === 0) {
-			for (let i of strArr) {
+			for (const i of strArr) {
 				if (grpArr[0].includes(i) && grpArr[1].includes(i)) {
 					total += priorities[i];
 					break;

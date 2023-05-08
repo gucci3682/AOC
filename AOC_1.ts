@@ -1,5 +1,5 @@
-import * as fs from 'fs';
-import * as rd from 'readline';
+import * as fs from "fs";
+import * as rd from "readline";
 
 const aoc_1a = (filename: string): void => {
   const reader = rd.createInterface(fs.createReadStream(filename));
@@ -20,13 +20,13 @@ const aoc_1a = (filename: string): void => {
   reader.on("close", () => {
     console.log(maxCalories);
   });
-}
+};
 
 aoc_1a("input_1.txt");
 
 const aoc_1b = (filename: string): void => {
   const reader = rd.createInterface(fs.createReadStream(filename));
-  let arrCalories: number[] = [];
+  const arrCalories: number[] = [];
   let currCalories = 0;
 
   reader.on("line", (line: string) => {
@@ -39,14 +39,16 @@ const aoc_1b = (filename: string): void => {
   });
 
   reader.on("close", () => {
-    let sortedCalories: number[] = arrCalories.sort((n1, n2) => {
+    const sortedCalories: number[] = arrCalories.sort((n1, n2) => {
       return n2 - n1;
     });
-    const top3 = sortedCalories.slice(0,3);
-    console.log(top3.reduce((accum, curr) => {
-      return accum + curr;
-    }, 0));
+    const top3 = sortedCalories.slice(0, 3);
+    console.log(
+      top3.reduce((accum, curr) => {
+        return accum + curr;
+      }, 0)
+    );
   });
-}
+};
 
 aoc_1b("input_1.txt");

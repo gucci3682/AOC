@@ -3,13 +3,13 @@ import * as rd from 'readline';
 
 const aoc_2a = (filename: string): void => {
   const reader = rd.createInterface(fs.createReadStream(filename));
-  let scores = {
+  const scores = {
     "X": 1,
     "Y": 2,
     "Z": 3
   }
 
-  let outcomes = {
+  const outcomes = {
     "W": 6,
     "D": 3,
     "L": 0
@@ -18,7 +18,7 @@ const aoc_2a = (filename: string): void => {
   let totalScore = 0;
 
   reader.on("line", (line: string) => {
-    let outcomeArray = line.split(" ");
+    const outcomeArray = line.split(" ");
     if (outcomeArray[1] === "X") {
       totalScore += scores["X"];
       if (outcomeArray[0] === "A") {
@@ -58,13 +58,13 @@ aoc_2a("input_2.txt");
 
 const aoc_2b = (filename: string): void => {
   const reader = rd.createInterface(fs.createReadStream(filename));
-  let outcomes = {
+  const outcomes = {
     "X": 0,
     "Y": 3,
     "Z": 6
   }
 
-  let score = {
+  const score = {
     "R": 1,
     "P": 2,
     "S": 3
@@ -73,7 +73,7 @@ const aoc_2b = (filename: string): void => {
   let totalScore = 0;
 
   reader.on("line", (line: string) => {
-    let outcomeArray = line.split(" ");
+    const outcomeArray = line.split(" ");
     if (outcomeArray[1] === "X") {
       totalScore += outcomes["X"];
       if (outcomeArray[0] === "A") {
