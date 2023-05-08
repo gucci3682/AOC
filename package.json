@@ -4,7 +4,7 @@
   "description": "clearing AOC to improve my algos",
   "main": "AOC_1.js",
   "scripts": {
-    "test": "npx tsnode"
+    "test": "npx ts-node"
   },
   "dependencies": {
     "ts-node": "^10.9.1",
